@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="app/css/css.css">
+</head>
+<body ng-app="app">
+   
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a ui-sref="home">home</a>
+                    <a ui-sref="home">casa</a>
+                    <a ui-sref="home">harbour</a>
+                    <a ui-sref="harbour">hour</a>
+                </li>
+            </ul>
+        </nav>
+    </header>   
+   
+     <div class="container" ui-view="main">
+     </div>
+     
+     
+     <footer>
+           this is sparta !!! 
+     </footer>
+     
+   <!-- Vendor -->  
+   <script src="bower_components/angular/angular.js"></script>
+   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+   
+   <!-- Main -->
+   <script src="app/app.js"></script>
+   <script src="app/core/core-module.js"></script>
+   <script src="app/core/core-charts.js"></script>
+   <!-- Factories -->
+   <script src="app/factories/factories.js"></script>
+   <script src="app/factories/user-factory.js"></script>
+   
+   <!-- Module -->
+   <script src="app/home/module-home.js"></script>
+   <script src="app/home/home.js"></script>
+   <script src="app/home/home-router.js"></script>
+   
+   <!-- Module -->
+   <script src="app/harbour/harbour-module.js"></script>
+   <script src="app/harbour/harbour-router.js"></script>
+   <script src="app/harbour/harbour.js"></script>
+   
+</body>
+</html>
