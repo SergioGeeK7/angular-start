@@ -3,14 +3,14 @@
 
 angular.module('app',[
     "core",
-    "factories",
-    /* places */
-    
-    "home",
-    "harbour"
-]);
-    
-    
-})()
+    "home.view",
+    "harbour.view"
+]).config(config);
+        
+config.$inject = ["$urlRouterProvider"]
 
-
+function config ($urlRouterProvider){
+    $urlRouterProvider.otherwise('/home');
+}
+    
+})();

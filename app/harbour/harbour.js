@@ -1,13 +1,22 @@
-(function() {
+(function () {
     'use strict';
 
-    angular
-        .module('harbour')
-        .controller('Harbour', Harbour);
-
+    route.$inject = ['$stateProvider'];
+ 
+    function route ($stateProvider) {
+          $stateProvider.state('harbour', {
+                url: '/harbour',
+                views: {
+                    "main": {
+                        controller: 'Harbour as vm',
+                        templateUrl: 'app/harbour/harbour.html'
+                    }
+                }
+            });
+    }
+    
     Harbour.$inject = ["user"];
-
-    /* @ngInject */
+    
     function Harbour(user){
         var vm = this;
         vm.hi = 'Yeah !!!';
@@ -28,4 +37,11 @@
         }
         
     }
+    
+    
+angular
+    .module('harbour.view',["user-factory"])
+    .config(route)
+    .controller('Harbour', Harbour);
+       
 })();

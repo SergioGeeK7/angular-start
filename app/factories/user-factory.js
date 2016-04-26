@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular
-        .module('factories')
+        .module('user-factory',[])
         .factory('user', user);
 
     user.$inject = [];
