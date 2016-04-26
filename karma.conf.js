@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Tue Apr 12 2016 17:21:04 GMT-0500 (Hora est. Pacífico, Sudamérica)
+// Generated on Tue Apr 26 2016 11:51:51 GMT-0500 (Hora est. Pacífico, Sudamérica)
 
 module.exports = function(config) {
   config.set({
@@ -15,25 +15,18 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-    	"./bower_components/angular/angular.js",
-    	'./bower_components/angular-mocks/angular-mocks.js',
-		"./bower_components/angular-ui-router/release/angular-ui-router.min.js",
-    	"./app/app.js",
-		"./app/core/core-module.js",
-		"./app/core/core-charts.js",
-		"./app/factories/factories.js",
-		"./app/factories/user-factory.js",
-		"./app/home/module-home.js",
-		"./app/home/home.js",
-		"./app/home/home-router.js",
-		"./app/harbour/harbour-module.js",
-		"./app/harbour/harbour-router.js",
-		"./app/harbour/harbour.js",
-	    './spec/**/*',
-	    './spec/**/*'
+       "bower_components/angular/angular.js",
+       "bower_components/angular-mocks/angular-mocks.js",
+       "bower_components/angular-ui-router/release/angular-ui-router.min.js",
+       "app/app.js",
+       "app/core/core-module.js",
+       "app/factories/user-factory.js",
+       "app/home/home.js",
+       "app/harbour/harbour.js",
+       "app/**/*spec.js"
     ],
 
-	//plugins : ['karma-jasmine', 'karma-phantomjs-launcher'],
+
     // list of files to exclude
     exclude: [
     ],
@@ -70,7 +63,14 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome', 'Chrome_without_security'],
+    // you can define custom flags 
+    customLaunchers: {
+      Chrome_without_security: {
+        base: 'Chrome',
+        flags: ['--disable-web-security']
+      }
+    },
 
 
     // Continuous Integration mode
