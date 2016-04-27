@@ -4,7 +4,8 @@
 angular.module('app',[
     "core",
     "home.view",
-    "harbour.view"
+    "harbour.view",
+    "shelter.view"
 ]).config(config);
         
 config.$inject = ["$urlRouterProvider"]

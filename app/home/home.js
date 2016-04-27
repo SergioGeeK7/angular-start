@@ -20,6 +20,7 @@
     function home(){
         var vm = this;
         vm.sayHi = "hellow";
+        vm.random = Math.random() * 10;
         activate();
 
         ////////////////

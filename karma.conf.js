@@ -21,8 +21,10 @@ module.exports = function (config) {
             "./app/app.js",
             "./app/core/core-module.js",
             "./app/factories/user-factory.js",
+            "./app/factories/credito-factory.js",
             "./app/home/home.js",
             "./app/harbour/harbour.js",
+            "./app/shelter/shelter.js",
             "./app/**/*spec.js"
         ],
 

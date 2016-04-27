@@ -21,7 +21,7 @@
         var vm = this;
         vm.hi = 'Yeah !!!';
         vm.users = getUsers();
-        console.log(vm.users);
+        
         
 
         activate();
@@ -40,7 +40,7 @@
     
     
 angular
-    .module('harbour.view',["user-factory"])
+    .module('harbour.view',['core','user-factory'])
     .config(route)
     .controller('Harbour', Harbour);
        
