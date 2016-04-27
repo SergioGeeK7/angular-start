@@ -31,8 +31,9 @@
     
 
 angular
-    .module('home.view',[])
-    .controller('Home', home)
+    .module('home.view',["core"])
     .config(configuration)
+    .controller('Home', home)
+    
     
 })()

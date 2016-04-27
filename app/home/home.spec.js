@@ -1,30 +1,35 @@
-describe( 'home section', function() {
-    
-  var scope;
-  var controller;
-  
-  beforeEach( module( 'home.view' ) );
-  
-  /*beforeEach( inject(function ($rootScope,$controller) {
-        scope = $rootScope.$new();
-        controller = $controller('Home', {
-                // '$scope': scope,
-        });
-      console.log(typeof $controller) 
-  }));*/
-    
-    /* beforeEach(inject(function ($rootScope) {
-            $scope = $rootScope.$new();
-        }));*/
-    
+/* jshint -W117, -W030 */
+describe('ccSidebar directive: ', function () {
+    var dropdownElement;
+    var el;
+    var innerElement;
+    var isOpenClass = 'dropy';
+    var scope;
 
-  it('should have a dummy test',  function() {
-      expect(true).toBe(true);
-  });
-    
-  //it('should have a dummy test 2', inject( function($controller) {
-      //expect(controller.sayHi).toBe("hellow");
-  //}));
-    
+    beforeEach(module('home.view'));
 
+    beforeEach(inject(function($compile, $rootScope) {
+    
+    }));
+
+    it("should be done right",function () {
+    	expect(1).to.be.equals(1);
+    	expect(1).to.be.equals(1);
+    	expect(1).to.be.equals(1);
+    	expect(1).to.be.equals(1);
+    });
+    
+    
+     it("should be done right",function () {
+    	expect(2).to.be.equals(2);
+    	expect(2).to.be.equals(2);
+    	expect(2).to.be.equals(2);
+    	expect(2).to.be.equals(2);
+    });
+    
+    
+    it("should be done right",function () {
+    	expect(1).to.be.equals(1);
+    });
+  
 });
