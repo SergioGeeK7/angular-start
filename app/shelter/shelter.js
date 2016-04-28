@@ -1,12 +1,15 @@
 (function () {
     'use strict';
     
-    Controller.$inject = ["credito"];
+    Controller.$inject = ["credito",'dateStringFilter'];
     
-    function Controller (credito) {
+    function Controller (credito,dateStringFilter) {
        var vm = this;
        vm.users = [];
+       vm.currentDate = dateStringFilter(new Date());
        getUsers();
+        
+        
         
         function getUsers () {
             
@@ -16,6 +19,8 @@
                     vm.users = data.data;
                 });
         }
+        
+        
     }
     
     
@@ -34,7 +39,7 @@
     }
     
     angular
-        .module('shelter.view',['core',"credito-factory"])
+        .module('shelter.view',['core',"credito-factory","dateString.filter"])
         .config(router)
         .controller("Shelter",Controller)
     
