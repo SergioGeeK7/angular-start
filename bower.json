@@ -1,0 +1,27 @@
+{
+  "name": "initangular",
+  "description": "that it",
+  "main": "index.html",
+  "authors": [
+    "Sergio <sergiogeek7@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/SergioGeeK7/angular-start",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "^1.3.2",
+    "angular-mocks": "^1.5.3",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.3",
+    "angular-ui-router": "^0.2.18",
+    "angular-animate": "^1.5.5",
+    "angular-touch": "^1.5.5"
+  }
+}

@@ -3,9 +3,11 @@
 
 angular.module('app',[
     "core",
+    "modal.component",
     "home.view",
     "harbour.view",
-    "shelter.view"
+    "shelter.view",
+    "hut.view"
 ]).config(config);
         
 config.$inject = ["$urlRouterProvider"]
