@@ -18,7 +18,7 @@ describe('Protractor Demo App', function() {
     browser.get('http://juliemr.github.io/protractor-demo/');
   });
 
-  it('should have a history', function() {
+  xit('should have a history', function() {
     add(1, 2);
     add(3, 4);
 
@@ -30,12 +30,11 @@ describe('Protractor Demo App', function() {
   });
     
   
-  it('should have a history 2', function() {
+  xit('should have a history 2', function() {
     add(1, 2);
     add(3, 4);
     expect(history.last().getText()).toContain('1 + 2');
     expect(history.first().getText()).toContain('3 + 4');
-    console.log(history.first().getText());
   });
     
 });
