@@ -1,4 +1,4 @@
-describe('Protractor Demo App', function() {
+xdescribe('Protractor Demo App', function() {
   
   //var firstNumber = element(by.css('.first'));
   var firstNumber = element(by.model('first'));
@@ -18,7 +18,7 @@ describe('Protractor Demo App', function() {
     browser.get('http://juliemr.github.io/protractor-demo/');
   });
 
-  xit('should have a history', function() {
+  it('should have a history', function() {
     add(1, 2);
     add(3, 4);
 
@@ -30,7 +30,7 @@ describe('Protractor Demo App', function() {
   });
     
   
-  xit('should have a history 2', function() {
+  it('should have a history 2', function() {
     add(1, 2);
     add(3, 4);
     expect(history.last().getText()).toContain('1 + 2');

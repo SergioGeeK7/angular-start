@@ -2,6 +2,6 @@
     'use strict';
 
 angular
-    .module('core',["ui.router","ui.bootstrap","ngTouch","ngAnimate"])
+    .module('core',["ui.router","ui.bootstrap","ngTouch","ngAnimate","loading.directive"])
     
 })()

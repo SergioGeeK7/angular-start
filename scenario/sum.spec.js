@@ -1,5 +1,5 @@
-describe('Protractor Demo App 2', function() {
-  xit('should add one and two', function() {
+xdescribe('Protractor Demo App 2', function() {
+  it('should add one and two', function() {
     browser.get('http://juliemr.github.io/protractor-demo/');
     element(by.model('first')).sendKeys(1);
     element(by.model('second')).sendKeys(2);
