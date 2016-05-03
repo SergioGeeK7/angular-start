@@ -20,7 +20,8 @@
     function Harbour(user){
         var vm = this;
         vm.hi = 'Yeah !!!';
-        vm.users = getUsers();
+        vm.users = [];
+        //vm.users = getUsers();
         
         
 
@@ -33,7 +34,7 @@
         }
         
         function getUsers (){
-            return user.get();
+            return user.getNames();
         }
         
     }

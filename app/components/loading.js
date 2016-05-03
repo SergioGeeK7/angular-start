@@ -1,14 +1,12 @@
 (function () {
     'use strict';
 
-    angular
-        .module('loading.directive',[])
-        .directive('loading', loading);
 
     loading.$inject = ['$interval','dateFilter'];
 
     /* @ngInject */
     function loading($interval,dateFilter) {
+        
         var directive = {
            /* bindToController: true,
             controller: Controller,
@@ -18,20 +16,28 @@
             scope: {
                 sayHi : "=",
                 customerInfo: '=info',
-                myCurrentTime : '='
+                myCurrentTime : '=',
+                enable : "="
             },
             templateUrl: 'app/components/loading.html'
         };
         return directive;
-
+        
+        ///////////////////////////////////////////////////////
+        
         function link(scope, element, attrs, controller) {
             
              var format,
              timeoutId;
-
+            
             function updateTime() {
-              element.text(dateFilter(new Date(), format));
+               var currentTime = dateFilter(new Date(), format); //element.text();
+               scope.currentTime = currentTime;
             }
+            
+            scope.$watch("enable",function (value){
+                 element[0].style.display =  value === "true" ? "block":"none";
+            });
 
             scope.$watch("myCurrentTime", function(value) {
               //format = attrs.myCurrentTime;
@@ -58,4 +64,12 @@
         
         
     }
+    
+    
+    
+    
+    
+    angular
+        .module('loading.directive',[])
+        .directive('loading', loading);
 })();

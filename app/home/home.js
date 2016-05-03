@@ -21,8 +21,6 @@
         var vm = this;
         vm.sayHi = "hellow";
         vm.random = Math.random() * 10;
-        //vm.format = 'M/d/yy h:mm:ss a'
-        vm.format = 'M/d/yy h:mm:ss a'
         activate();
 
         ////////////////

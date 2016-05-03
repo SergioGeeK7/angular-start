@@ -1,5 +1,5 @@
 
-describe('test home', function () {
+xdescribe('test home', function () {
     
     
     var controller;

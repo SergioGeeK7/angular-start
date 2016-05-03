@@ -22,6 +22,7 @@
     "angular": "^1.5.3",
     "angular-ui-router": "^0.2.18",
     "angular-animate": "^1.5.5",
-    "angular-touch": "^1.5.5"
+    "angular-touch": "^1.5.5",
+    "SVG-Loaders": "svg-loaders#^1.0.2"
   }
 }

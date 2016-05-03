@@ -13,19 +13,20 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
+            
             './bower_components/bindPolyfill.js',
             './node_modules/ng-midway-tester/src/ngMidwayTester.js',
             './bower_components/angular/angular.js',
+            "./bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
             "./bower_components/angular-ui-router/release/angular-ui-router.min.js",
             "./bower_components/angular-mocks/angular-mocks.js",
-            "./app/app.js",
             "./app/core/core-module.js",
-            "./app/common/user-factory.js",
             "./app/common/credito-factory.js",
             "./app/common/date-filter.js",
-            "./app/home/home.js",
-            "./app/harbour/harbour.js",
+            "./app/app.js",
             "./app/shelter/shelter.js",
+            "./app/components/loading.js",
+             '**/*.html',
             "./app/**/*spec.js"
         ],
 
@@ -43,9 +44,18 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'src/client/app/**/*.js': 'coverage'
+            '**/*.html': ['ng-html2js'],
+           // 'src/client/app/**/*.js': 'coverage',
         },
-
+         ngHtml2JsPreprocessor: {
+              // strip this from the file path
+              //stripPrefix: 'public/',
+              //stripSuffix: '.ext',
+              //moduleName: 'dir-templates',
+              // prepend this to the
+              //prependPrefix: 'served/'
+               moduleName: 'templates'
+         },
         // test results reporter to use
         // possible values: 'dots', 'progress', 'coverage'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
