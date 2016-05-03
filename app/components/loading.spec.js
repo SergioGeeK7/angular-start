@@ -1,5 +1,5 @@
 describe("Unit: Testing Directives", function() {
-   this.timeout(15000);
+  this.timeout(15000);
   var compile;
   var tag = '<loading my-current-time="format" class="loading" enable="enable"></loading>';
   var scope;
@@ -18,7 +18,7 @@ describe("Unit: Testing Directives", function() {
     
     function getCompiledElement($scope,$compile){
         
-      var compiledElement = $compile(tag)($scope);   
+      var compiledElement = $compile(tag)($scope);
       $scope.$digest();
       
       return {
@@ -59,5 +59,25 @@ describe("Unit: Testing Directives", function() {
       },2000);
   });
     
+    /*
+    it('should increment value on click of button', function () {
+      // jqLite’s triggerHandler
+      
+      
+      var spanElement = directiveElem.find('span');
+      expect(spanElement.text()).toEqual(scope.text);
+      /////////////////
+      
+      scope.value=10;
+      var button = directiveElem.find('button');
+
+      button.triggerHandler('click');
+      scope.$digest();
+
+      expect(scope.value).toEqual(11);
+    });
+    */
+    
+    // http://www.sitepoint.com/angular-testing-tips-testing-directives/
 
 });

@@ -18,6 +18,8 @@
                 customerInfo: '=info',
                 myCurrentTime : '=',
                 enable : "="
+                //onChange:'&' method 
+                //notify: '@'  one way data binding
             },
             templateUrl: 'app/components/loading.html'
         };
